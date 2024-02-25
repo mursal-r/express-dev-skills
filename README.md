@@ -1,2 +1,2 @@
 # express-dev-skills
-My Dev Skills - Part 1
+My Dev Skills - Part 1 & 2
