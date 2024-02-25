@@ -3,11 +3,16 @@ var router = express.Router();
 
 //require controller that will export Skills CRUD functions:
 var skillsCtrl = require('../controllers/skills');
+const skills = require("../controllers/skills");
+
 
 // All actual paths start with "/skills"
 
-// GET /skills:
-router.get('/', skillsCtrl.index);
-router.get('/:id', skillsCtrl.show);
+// GET & POST & DELETE /skills:
+router.get('/', skillsCtrl.index)
+router.get('/new', skillsCtrl.new)
+router.get('/:id', skillsCtrl.show)
+router.post('/', skillsCtrl.create)
+router.delete('/:id', skillsCtrl.delete)
 
 module.exports = router;
